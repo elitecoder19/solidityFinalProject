@@ -1,1 +1,28 @@
+# Create a token 
 
+This solidity program is the final submission of ETH:BEGINNER course ,it covers creating public variables, mapping addresses, minting and burning tokens, and using conditionals.
+Simple overview of use/purpose.
+
+## Description
+
+the program is wrotten in solidity , a programming language to create smart contracts on the Ethereum blockchain, the contract has two functions which mint the tokens and burn the tokens
+
+## Getting Started
+
+
+
+Executing program
+
+you can run this program on remix IDE which is an online solidity IDE ,here is the link to the website https://remix.ethereum.org/
+
+
+## Authors
+
+Name : Rahul Jain(elitecoder19)
+email: jainrahul98888@gmail.com
+
+
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
