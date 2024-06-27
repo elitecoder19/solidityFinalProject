@@ -1,20 +1,77 @@
 # Create a token 
 
 This solidity program is the final submission of ETH:BEGINNER course ,it covers creating public variables, mapping addresses, minting and burning tokens, and using conditionals.
-Simple overview of use/purpose.
+Simple overview of use/purpose. This solidity program acts as a starting point to learn about Solidity and eager to know how it works.
 
 ## Description
 
-the program is wrotten in solidity , a programming language to create smart contracts on the Ethereum blockchain, the contract has two functions which mint the tokens and burn the tokens
+the program is written in solidity , a programming language to create smart contracts on the Ethereum blockchain, 
+the contract has two functions which mint the tokens and burn the tokens
+
 
 ## Getting Started
 
-
-
 Executing program
 
-you can run this program on remix IDE which is an online solidity IDE ,here is the link to the website https://remix.ethereum.org/
+you can run this program on remix IDE which is an online solidity IDE ,here is the link to the website https://remix.ethereum.org/.
 
+once you are on the Remix website, create a new file by clicking on the "+" icon. Save the file with a .sol extension(solidityFinalProject.sol).
+
+copy, paste and run the following code
+
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.18;
+
+/*
+       REQUIREMENTS
+    1. Your contract will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)
+    2. Your contract will have a mapping of addresses to balances (address => uint)
+    3. You will have a mint function that takes two parameters: an address and a value. 
+       The function then increases the total supply by that number and increases the balance 
+       of the “sender” address by that amount
+    4. Your contract will have a burn function, which works the opposite of the mint function, as it will destroy tokens. 
+       It will take an address and value just like the mint functions. It will then deduct the value from the total supply 
+       and from the balance of the “sender”.
+    5. Lastly, your burn function should have conditionals to make sure the balance of "sender" is greater than or equal 
+       to the amount that is supposed to be burned.
+*/
+
+contract MyToken {
+
+    // public variables here
+
+    string public tokenName = "INIFINITY";
+    string public tokenAbbrv = "INIF";
+    uint public totalSupply = 0;
+
+
+    // mapping variable here
+    mapping(address => uint) public balances;  //(key=>value) here we are mapping the balance
+
+    // mint function
+    //it will have address and value
+    function mint (address _address, uint _val) public {
+        totalSupply += _val;
+        balances[_address]  += _val; //balance of the address + valuw  
+    }
+
+    // burn function
+    //now we will create a function which destroys the tokens 
+
+    function burn (address _address, uint _val) public  {
+        
+        if(balances[_address] >= _val){  //balance should be greater than or equal to the amount which is supposed to be burned 
+        totalSupply -= _val;
+        balances[_address] -= _val;
+        }
+    }
+
+}
+
+To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.4" (or another compatible version), 
+and then click on the "Compile HelloWorld.sol" button.
+
+Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar.
 
 ## Authors
 
