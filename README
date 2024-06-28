@@ -1,4 +1,4 @@
-# Create a token 
+# solidityFinalProject
 
 This solidity program is the final submission of ETH:BEGINNER course ,it covers creating public variables, mapping addresses, minting and burning tokens, and using conditionals.
 Simple overview of use/purpose. This solidity program acts as a starting point to learn about Solidity and eager to know how it works.
@@ -11,9 +11,9 @@ the contract has two functions which mint the tokens and burn the tokens
 
 ## Getting Started
 
-Executing program
+## Installing
 
-you can run this program on remix IDE which is an online solidity IDE ,here is the link to the website https://remix.ethereum.org/.
+You don't need to install anything ,all you need is internet connection and a supported broweser.you can run this program on remix IDE which is an online solidity IDE ,here is the link to the website https://remix.ethereum.org/.
 
 once you are on the Remix website, create a new file by clicking on the "+" icon. Save the file with a .sol extension(solidityFinalProject.sol).
 
@@ -69,16 +69,16 @@ contract MyToken {
 }
 
 To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.4" (or another compatible version), 
-and then click on the "Compile HelloWorld.sol" button.
+and then click on the "Compile solidityFinalProject.sol" button.
 
 Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar.
 
 ## Authors
 
 Name : Rahul Jain(elitecoder19)
-email: jainrahul98888@gmail.com
-
-
+email: jainrahul98888@gmail.com'
+github: https://github.com/elitecoder19
+Linkedin: https://www.linkedin.com/in/rahul-jain-88678b202/
 
 ## License
 
