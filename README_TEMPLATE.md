@@ -1,41 +1,75 @@
-# Project Title
+# solidityFinalProject
 
-Simple overview of use/purpose.
+This solidity program is the final submission of ETH:BEGINNER course ,it covers creating public variables, mapping addresses, minting and burning tokens, and using conditionals.
+Simple overview of use/purpose. This solidity program acts as a starting point to learn about Solidity and eager to know how it works.
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+the program is written in solidity , a programming language to create smart contracts on the Ethereum blockchain, 
+the contract has two functions which mint the tokens and burn the tokens
 
 ## Getting Started
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+You don't need to install anything ,all you need is internet connection and a supported broweser.you can run this program on remix IDE which is an online solidity IDE,here is the link to the website https://remix.ethereum.org/.
+
+once you are on the Remix website, create a new file by clicking on the "+" icon. Save the file with a .sol extension(solidityFinalProject.sol).
+
+copy, paste and run the following code
 
 ### Executing program
+- open the Remix ide.
+- copy the following code
 
-* How to run the program
-* Step-by-step bullets
+  contract MyToken {
 ```
-code blocks for commands
+// public variable here
 ```
+   
 
-## Help
+    string public tokenName = "INIFINITY";
+    string public tokenAbbrv = "INIF";
+    uint public totalSupply = 0;
 
-Any advise for common problems or issues.
 ```
-command to run if program contains helper info
+mapping variable here
 ```
+    
+    mapping(address => uint) public balances;  //(key=>value) here we are mapping the balance
+
+```
+// mint function
+//it will have address and value
+```
+    function mint (address _address, uint _val) public {
+        totalSupply += _val;
+        balances[_address]  += _val; //balance of the address + valuw  
+    }
+```
+//burn function
+//now we will create a function which destroys the tokens 
+```
+  
+    //now we will create a function which destroys the tokens 
+
+    function burn (address _address, uint _val) public  {
+         if(balances[_address] >= _val){  //balance should be greater than or equal to the amount which is supposed to be burned 
+        totalSupply -= _val;
+        balances[_address] -= _val;
+        }
+    }
+    }
+
+
 
 ## Authors
 
-Contributors names and contact info
+Rahul Jain
+jainrahul98888@gmail.com
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
 
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the MIT License
